@@ -1,8 +1,9 @@
 {
-  "name": "@romanschejbal/bs-antd",
+  "name": "@schero/bs-antd",
   "version": "1.0.0",
   "description": "BuckleScript bindings for Ant Design",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
