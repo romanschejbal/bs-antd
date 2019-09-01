@@ -367,10 +367,13 @@ type icon = [
   | `woman
 ];
 
-let iconToJsSafe = input =>
-  try (iconToJs(input)) {
-  | Js.Exn.Error(_) => ""
-  };
+let iconToJsSafe = icon =>
+  icon
+  |> (
+    fun
+    | Some(x) => iconToJs(x)
+    | None => ""
+  );
 
 module AntIcon = {
   [@bs.module "antd"] [@react.component]
