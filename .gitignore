@@ -2,3 +2,4 @@ node_modules
 **/*.bs.js
 .merlin
 lib
+.bsb.lock
