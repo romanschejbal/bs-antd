@@ -367,7 +367,7 @@ type icon = [
   | `woman
 ];
 
-let iconToJsSafe = icon =>
+let iconToJsSafe = (~icon=?, ()) =>
   icon
   |> (
     fun

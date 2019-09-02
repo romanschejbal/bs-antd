@@ -28,7 +28,7 @@ let make =
       ~children: React.element=?,
     ) =>
   <AntAvatar
-    icon={Antd_Utils.tts(Antd_Icon.iconToJsSafe(icon))}
+    icon={Antd_Utils.tts(Antd_Icon.iconToJsSafe(~icon, ()))}
     shape
     size
     src
