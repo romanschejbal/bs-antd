@@ -54,11 +54,11 @@ workflows:
           requires:
             - build
           filters:
-            tags:
-              only: /^v.*/
+            branches:
+              only: master
       - publish:
           requires:
             - deploy
           filters:
-            branches:
-              only: master
+            tags:
+              only: /^v.*/
