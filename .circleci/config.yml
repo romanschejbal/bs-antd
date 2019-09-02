@@ -27,17 +27,15 @@ jobs:
 
   deploy:
     <<: *defaults
-
     steps:
-      - attach_workspace:
-          at: ~/repo
+      - run:
+          name: Placeholder
+          command: echo "CircleCI cannot do AND operand on filters so this is a workaround"
 
   publish:
     <<: *defaults
 
     steps:
-      - attach_workspace:
-          at: ~/repo
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
@@ -54,11 +52,11 @@ workflows:
           requires:
             - build
           filters:
-            branches:
-              only: master
+            tags:
+              only: /^v.*/
       - publish:
           requires:
             - deploy
           filters:
-            tags:
-              only: /^v.*/
+            branches:
+              only: master
