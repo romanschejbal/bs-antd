@@ -6,3 +6,4 @@ module Layout = Antd_Layout;
 module Menu = Antd_Menu;
 module Row = Antd_Row;
 module Typography = Antd_Typography;
+module Input = Antd_Input;
