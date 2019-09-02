@@ -26,11 +26,17 @@ jobs:
 
       # - run: yarn test
 
+  deploy:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/repo
       - persist_to_workspace:
           root: ~/repo
           paths: .
 
-  deploy:
+  publish:
     <<: *defaults
 
     steps:
@@ -52,7 +58,11 @@ workflows:
           requires:
             - build
           filters:
+            branches:
+              only: master
+      - publish:
+          requires:
+            - deploy
+          filters:
             tags:
               only: /^v.*/
-            branches:
-              only: /.*/
