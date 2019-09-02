@@ -20,25 +20,6 @@ module AntDropdown = {
     "Dropdown";
 };
 
-module AntDropdownButton = {
-  [@bs.module "antd"] [@bs.scope "Dropdown"] [@react.component]
-  external make:
-    (
-      ~disabled: bool=?,
-      ~icon: React.element=?,
-      ~overlay: React.element=?,
-      ~placement: 'placementType=?,
-      ~size: 'sizeType=?,
-      ~trigger: array('triggerType)=?,
-      ~_type: 'typeType=?,
-      ~visible: bool=?,
-      ~onClick: ReactEvent.Mouse.t => unit=?,
-      ~children: React.element=?
-    ) =>
-    React.element =
-    "Button";
-};
-
 [@react.component]
 let make =
     (
@@ -73,6 +54,25 @@ let make =
     onVisibleChange>
     children
   </AntDropdown>;
+
+module AntDropdownButton = {
+  [@bs.module "antd"] [@bs.scope "Dropdown"] [@react.component]
+  external make:
+    (
+      ~disabled: bool=?,
+      ~icon: React.element=?,
+      ~overlay: React.element=?,
+      ~placement: 'placementType=?,
+      ~size: 'sizeType=?,
+      ~trigger: array('triggerType)=?,
+      ~_type: 'typeType=?,
+      ~visible: bool=?,
+      ~onClick: ReactEvent.Mouse.t => unit=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Button";
+};
 
 module Button = {
   [@react.component]
