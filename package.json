@@ -1,6 +1,6 @@
 {
   "name": "@schero/bs-antd",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "BuckleScript bindings for Ant Design",
   "main": "index.js",
   "private": false,

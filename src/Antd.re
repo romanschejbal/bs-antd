@@ -2,6 +2,7 @@ module AutoComplete = Antd_AutoComplete;
 module Avatar = Antd_Avatar;
 module Button = Antd_Button;
 module Card = Antd_Card;
+module Divider = Antd_Divider;
 module Icon = Antd_Icon;
 module Input = Antd_Input;
 module Layout = Antd_Layout;
