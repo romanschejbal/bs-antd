@@ -1,5 +1,14 @@
 node_modules
+
+# bs-platform
 **/*.bs.js
 .merlin
 lib
 .bsb.lock
+
+# editors
+**/.vscode
+**/.idea
+
+# MacOS
+**/.DS_Store
