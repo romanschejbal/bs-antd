@@ -13,7 +13,8 @@ external make:
     ~value: string=?,
     ~onChange: ReactEvent.Form.t => unit=?,
     ~onPressEnter: ReactEvent.Form.t => unit=?,
-    ~allowClear: bool=?
+    ~allowClear: bool=?,
+    ~placeholder: string=?
   ) =>
   React.element =
   "Input";
@@ -26,7 +27,8 @@ module TextArea = {
       ~defaultValue: string=?,
       ~value: string=?,
       ~onPressEnter: ReactEvent.Form.t => unit=?,
-      ~children: string=?
+      ~children: string=?,
+      ~placeholder: string=?
     ) =>
     React.element =
     "TextArea";
