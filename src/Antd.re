@@ -11,4 +11,5 @@ module Input = Antd_Input;
 module Layout = Antd_Layout;
 module Menu = Antd_Menu;
 module Row = Antd_Row;
+module Select = Antd_Select;
 module Typography = Antd_Typography;
