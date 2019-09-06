@@ -14,10 +14,10 @@ let make =
       ~justify:
          [@bs.string] [
            | `start
-           | `end_
+           | [@bs.as "end"] `end_
            | `center
-           | `space_around
-           | `space_between
+           | [@bs.as "space-around"] `space_around
+           | [@bs.as "space-between"] `space_between
          ]=?,
       ~_type: string=?,
       ~children: React.element=?,
