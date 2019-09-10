@@ -10,6 +10,7 @@ external make:
     ~size: string=?,
     ~suffix: React.element=?,
     ~_type: string=?,
+    ~name: string=?,
     ~value: string=?,
     ~onChange: ReactEvent.Form.t => unit=?,
     ~onPressEnter: ReactEvent.Form.t => unit=?,
@@ -25,6 +26,7 @@ module TextArea = {
     (
       ~autosize: bool=?, /* @todo: can be set to true|false or an object { minRows: 2, maxRows: 6 } */
       ~defaultValue: string=?,
+      ~name: string=?,
       ~value: string=?,
       ~onPressEnter: ReactEvent.Form.t => unit=?,
       ~children: string=?,
@@ -38,6 +40,7 @@ module Search = {
   [@bs.module "antd"] [@bs.scope "Input"] [@react.component]
   external make:
     (
+      ~name: string=?,
       ~enterButton: bool=?, /* @todo: bool|React.element=?, */
       ~onSearch: (string, ReactEvent.Form.t) => unit=?
     ) =>
@@ -55,5 +58,6 @@ module Group = {
 
 module Password = {
   [@bs.module "antd"] [@bs.scope "Input"] [@react.component]
-  external make: (~visibilityToggle: bool=?) => React.element = "Password";
+  external make: (~name: string=?, ~visibilityToggle: bool=?) => React.element =
+    "Password";
 };

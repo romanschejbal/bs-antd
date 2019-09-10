@@ -12,6 +12,7 @@ external make:
     ~filterOption: (string, 'option) => bool=?,
     ~optionLabelProp: string=?,
     ~placeholder: string=?,
+    ~name: string=?,
     ~value: 'value=?,
     ~onBlur: unit => unit=?,
     ~onChange: 'value => unit=?,
