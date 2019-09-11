@@ -5,7 +5,7 @@ external make:
     ~autoClearSearchValue: bool=?,
     ~autoFocus: bool=?,
     ~defaultActiveFirstOption: bool=?,
-    ~defaultValue: 'defaultValue, /*string|string[]number|number[]LabeledValue|LabeledValue[]=?,*/
+    ~defaultValue: 'defaultValue=?, /*string|string[]number|number[]LabeledValue|LabeledValue[]=?,*/
     ~disabled: bool=?,
     ~dropdownClassName: string=?,
     ~dropdownMatchSelectWidth: bool=?,
