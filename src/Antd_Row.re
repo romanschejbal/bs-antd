@@ -29,7 +29,7 @@ let make =
     gutter
     justify={
       switch (justify) {
-      | None => ""
+      | None => None |> Obj.magic
       | Some(x) => justifyToJs(x)
       }
     }
