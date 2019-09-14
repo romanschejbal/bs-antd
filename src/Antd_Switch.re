@@ -2,7 +2,7 @@
 external make:
   (
     ~autoFocus: bool=?,
-    ~checked: bool=?,
+    ~checked: 'checked=?,
     ~checkedChildren: 'checkedChildren=?,
     ~defaultChecked: bool=?,
     ~disabled: bool=?,

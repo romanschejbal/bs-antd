@@ -17,8 +17,10 @@ external make:
     ~size: string=?,
     ~suffixIcon: React.element=?,
     ~style: 'object_=?,
+    ~onChange: ('date, string) => unit=?,
     ~onOpenChange: 'status => unit=?,
-    ~onPanelChange: ('value, 'mode) => unit=?
+    ~onPanelChange: ('value, 'mode) => unit=?,
+    ~value:'value=?
   ) =>
   React.element =
   "DatePicker";
