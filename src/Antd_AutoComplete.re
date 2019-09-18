@@ -25,3 +25,9 @@ external make:
   ) =>
   React.element =
   "AutoComplete";
+
+module Option = {
+  [@bs.module "antd"] [@bs.scope "AutoComplete"] [@react.component]
+  external make: (~key: string, ~children: React.element=?) => React.element =
+    "Option";
+};

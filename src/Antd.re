@@ -12,6 +12,7 @@ module Icon = Antd_Icon;
 module Input = Antd_Input;
 module Layout = Antd_Layout;
 module Menu = Antd_Menu;
+module Radio = Antd_Radio;
 module Row = Antd_Row;
 module Select = Antd_Select;
 module Switch = Antd_Switch;
