@@ -26,8 +26,17 @@ external make:
   React.element =
   "AutoComplete";
 
+module OptGroup = {
+  [@bs.module "antd"] [@bs.scope "AutoComplete"] [@react.component]
+  external make:
+    (~key: string, ~label: React.element, ~children: React.element=?) =>
+    React.element =
+    "OptGroup";
+};
+
 module Option = {
   [@bs.module "antd"] [@bs.scope "AutoComplete"] [@react.component]
-  external make: (~key: string, ~children: React.element=?) => React.element =
+  external make:
+    (~key: string, ~value: 'value, ~children: React.element=?) => React.element =
     "Option";
 };
