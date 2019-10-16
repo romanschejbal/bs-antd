@@ -14,7 +14,8 @@ module AntButton = {
       ~_type: 'e=?,
       ~onClick: 'c=?,
       ~block: 'a=?,
-      ~children: React.element=?
+      ~children: React.element=?,
+      ~className: string=?
     ) =>
     React.element =
     "Button";
@@ -32,10 +33,19 @@ let make =
       ~size: [@bs.string] [ | `small | `large]=?,
       ~target: string=?,
       ~loading: bool=?,
-      ~_type: [@bs.string] [ | `primary | `default | `dashed | `danger | `link | `ghost]=?,
+      ~_type:
+         [@bs.string] [
+           | `primary
+           | `default
+           | `dashed
+           | `danger
+           | `link
+           | `ghost
+         ]=?,
       ~onClick: ReactEvent.Mouse.t => unit=?,
       ~block: bool=?,
       ~children: React.element=?,
+      ~className: string=?,
     ) =>
   <AntButton
     _type
@@ -49,6 +59,7 @@ let make =
     target
     onClick
     block
-    loading>
+    loading
+    className>
     children
   </AntButton>;
