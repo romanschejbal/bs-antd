@@ -1,7 +1,14 @@
 module AntRow = {
   [@bs.module "antd"] [@react.component]
   external make:
-    (~align: 'a, ~gutter: 'b, ~justify: 'c, ~_type: 'd, ~children: 'e) =>
+    (
+      ~align: 'a=?,
+      ~gutter: 'b=?,
+      ~justify: 'c=?,
+      ~_type: 'd=?,
+      ~children: 'e=?,
+      ~className: string=?
+    ) =>
     React.element =
     "Row";
 };
@@ -23,10 +30,12 @@ let make =
       ~justify=?,
       ~_type: string=?,
       ~children: React.element=?,
+      ~className: string=?,
     ) =>
   <AntRow
     align
     gutter
+    className
     justify={
       switch (justify) {
       | None => None |> Obj.magic
