@@ -9,6 +9,7 @@ external make:
     ~defaultActiveFirstOption: bool=?,
     ~defaultValue: array(string)=?,
     ~disabled: bool=?,
+    ~dropdownAlign: 'dropdownAlign=?,
     ~dropdownClassName: string=?,
     ~filterOption: (string, 'option) => bool=?,
     ~optionLabelProp: string=?,
