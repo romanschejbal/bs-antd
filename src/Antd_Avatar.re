@@ -8,6 +8,7 @@ module AntAvatar = {
       ~src: 'd=?,
       ~srcSet: 'e=?,
       ~alt: 'f=?,
+      ~className: string=?,
       ~onError: unit => bool=?,
       ~children: React.element=?
     ) =>
@@ -24,6 +25,7 @@ let make =
       ~src: string=?,
       ~srcSet: string=?,
       ~alt: string=?,
+      ~className: string=?,
       ~onError: unit => bool=?,
       ~children: React.element=?,
     ) =>
@@ -34,6 +36,7 @@ let make =
     src
     srcSet
     alt
+    className
     onError>
     children
   </AntAvatar>;
