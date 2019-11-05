@@ -46,20 +46,25 @@ let make =
       ~block: bool=?,
       ~children: React.element=?,
       ~className: string=?,
+      ~testId: string=?,
     ) =>
-  <AntButton
-    _type
-    disabled
-    ghost
-    href
-    htmlType
-    icon={Antd_Utils.tts(Antd_Icon.iconToJsSafe(~icon, ()))}
-    shape
-    size
-    target
-    onClick
-    block
-    loading
-    className>
-    children
-  </AntButton>;
+  ReasonReact.cloneElement(
+    <AntButton
+      _type
+      disabled
+      ghost
+      href
+      htmlType
+      icon={Antd_Utils.tts(Antd_Icon.iconToJsSafe(~icon, ()))}
+      shape
+      size
+      target
+      onClick
+      block
+      loading
+      className>
+      children
+    </AntButton>,
+    ~props={"data-testid": testId},
+    [||],
+  );
