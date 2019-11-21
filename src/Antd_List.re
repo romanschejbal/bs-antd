@@ -9,8 +9,8 @@ external make:
     ~loading: bool=?,
     ~loadMore: React.element=?,
     ~split: bool=?,
-    ~dataSource: array('a)=?,
-    ~renderItem: 'b => React.element=?
+    ~dataSource: array('item)=?,
+    ~renderItem: 'item => React.element=?
   ) =>
   React.element =
   "List";
