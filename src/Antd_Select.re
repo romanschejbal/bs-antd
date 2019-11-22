@@ -16,6 +16,7 @@ external make:
     ~dropdownMatchSelectWidth: bool=?,
     ~dropdownRender: (React.element, 'props) => React.element=?,
     ~dropdownStyle: 'obj=?,
+    ~dropdownAlign: 'domAlign=?,
     ~filterOption: ('inputValue, 'option) => bool=?,
     ~firstActiveValue: array(string)=?,
     ~getPopupContainer: unit => Dom.element=?,
