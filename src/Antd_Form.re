@@ -3,10 +3,10 @@ module FormItem = {
   external make:
     (
       ~label: string,
-      ~help: option(string)=?,
+      ~help: string=?,
       ~required: bool=?,
       ~className: string=?,
-      ~validateStatus: option(string)=?,
+      ~validateStatus: string=?,
       ~children: React.element
     ) =>
     React.element =
