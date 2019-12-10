@@ -46,6 +46,7 @@ let make =
       ~block: bool=?,
       ~children: React.element=?,
       ~className: string=?,
+      ~id: string=?,
       ~testId: string=?,
     ) =>
   ReasonReact.cloneElement(
@@ -62,7 +63,8 @@ let make =
       onClick
       block
       loading
-      className>
+      className
+      id>
       children
     </AntButton>,
     ~props={"data-testid": testId},
