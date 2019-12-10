@@ -15,7 +15,8 @@ module AntButton = {
       ~onClick: 'c=?,
       ~block: 'a=?,
       ~children: React.element=?,
-      ~className: string=?
+      ~className: string=?,
+      ~id: string=?
     ) =>
     React.element =
     "Button";
