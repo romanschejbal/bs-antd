@@ -1,5 +1,5 @@
 # @schero/bs-antd
-BuckleScript bindings for Ant Design
+ReasonML / BuckleScript bindings for Ant Design
 
 1. `yarn add @schero/bs-antd`
 1. add `"@schero/bs-antd"` to your `bs-dependencies` inside `bsconfig.json`
