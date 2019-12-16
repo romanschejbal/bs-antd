@@ -13,6 +13,7 @@ external make:
     ~name: 'name=?,
     ~value: 'value=?,
     ~onChange: ReactEvent.Form.t => unit=?,
+    ~onBlur: ReactEvent.Form.t => unit=?,
     ~onPressEnter: ReactEvent.Form.t => unit=?,
     ~allowClear: bool=?,
     ~placeholder: string=?
