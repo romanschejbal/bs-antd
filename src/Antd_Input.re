@@ -29,6 +29,7 @@ module TextArea = {
       ~defaultValue: string=?,
       ~name: string=?,
       ~value: string=?,
+      ~onChange: ReactEvent.Form.t => unit=?,
       ~onPressEnter: ReactEvent.Form.t => unit=?,
       ~children: string=?,
       ~placeholder: string=?
