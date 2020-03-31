@@ -16,6 +16,7 @@ module Layout = Antd_Layout;
 module List = Antd_List;
 module Menu = Antd_Menu;
 module Modal = Antd_Modal;
+module Popover = Antd_Popover;
 module Progress = Antd_Progress;
 module ProgressGradient = Antd_ProgressGradient;
 module Radio = Antd_Radio;
